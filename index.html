@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shukart Ayurveda | Dr. Shushma Sharma, MD (Kayachikitsa)</title>
+<meta name="description" content="Shukart Ayurveda, Greater Noida. Root-cause Ayurvedic care by Dr. Shushma Sharma, BAMS, MD (Kayachikitsa): consultation, Nadi Pariksha, medicines, Panchakarma, diet, yoga and lifestyle guidance.">
+<meta name="theme-color" content="#34501C">
+<meta property="og:title" content="Shukart Ayurveda">
+<meta property="og:description" content="Rejuvenate, wellness, healing. Ayurvedic care that looks for the root of disease.">
+<link rel="icon" type="image/webp" href="assets/images/logo-mark.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Hind:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --olive:#34501C;
+  --olive-deep:#243912;
+  --leaf:#5E7F1E;
+  --mist:#F3F6EC;
+  --mist-2:#E6EDD9;
+  --white:#FFFFFF;
+  --gold:#B4863A;
+  --ink:#1F2718;
+  --muted:#5A6551;
+  --line:rgba(52,80,28,.16);
+  --serif:"Marcellus","Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Hind","Segoe UI",Roboto,Arial,sans-serif;
+  --header-h:76px;
+  --wrap:min(1160px, calc(100% - 40px));
+  --arch:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500' preserveAspectRatio='none'%3E%3Cpath d='M0 500V190C0 105 88 66 148 48C178 39 194 22 200 0C206 22 222 39 252 48C312 66 400 105 400 190V500Z'/%3E%3C/svg%3E");
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + env(safe-area-inset-top,0px) + 12px);-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--sans);font-size:1.0625rem;line-height:1.7;color:var(--ink);background:var(--white);overflow-x:hidden}
+body.menu-open{overflow:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;color:var(--olive-deep);margin:0;line-height:1.15;letter-spacing:.005em}
+h1{font-size:clamp(2.4rem,5.2vw,4.25rem);line-height:1.06}
+h2{font-size:clamp(1.9rem,3.4vw,2.9rem)}
+h3{font-size:clamp(1.3rem,1.8vw,1.55rem)}
+p{margin:0}
+.wrap{width:var(--wrap);margin-inline:auto}
+.lead{font-size:clamp(1.05rem,1.3vw,1.18rem);color:var(--muted);max-width:60ch}
+.hi{font-family:var(--sans);font-weight:500}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-999px;top:10px;background:var(--olive);color:#fff;padding:10px 16px;border-radius:6px;z-index:2000}
+.skip:focus{left:10px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 26px;border-radius:999px;font-weight:600;font-size:1rem;text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.btn-solid{background:var(--olive);color:#fff}
+.btn-solid:hover{background:var(--olive-deep)}
+.btn-line{border-color:var(--olive);color:var(--olive);background:transparent}
+.btn-line:hover{background:var(--olive);color:#fff}
+.btn-white{background:#fff;color:var(--olive-deep)}
+.btn-white:hover{background:var(--mist)}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* gold ornament rule, echoing the logo's arrow line */
+.orn{display:flex;align-items:center;gap:12px;color:var(--gold);margin:0 0 22px}
+.orn::before,.orn::after{content:"";height:1px;background:currentColor;flex:0 0 42px}
+.orn svg{width:14px;height:14px}
+.orn.center{justify-content:center}
+
+/* header */
+.site-header{position:fixed;inset:0 0 auto;z-index:1000;padding-top:env(safe-area-inset-top,0px);background:rgba(255,255,255,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .2s}
+.site-header.scrolled{border-color:var(--line)}
+.site-header:not(.scrolled){background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none}
+.site-header:not(.scrolled) .brand b{color:#fff}
+.site-header:not(.scrolled) .brand small{color:#D6B06E}
+.site-header,.brand b,.brand small{transition:background .3s,border-color .3s,color .3s}
+body.menu-open .site-header{backdrop-filter:none;-webkit-backdrop-filter:none;background:#fff;border-color:var(--line)}
+body.menu-open .site-header .brand b{color:var(--olive-deep)}
+body.menu-open .site-header .brand small{color:var(--leaf)}
+.header-in{height:var(--header-h);display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand .mk{width:50px;height:50px;border-radius:50%;background:#fff;display:grid;place-items:center;flex:none;border:1px solid var(--line)}
+.brand .mk img{width:36px;height:auto}
+.brand b{display:block;font-family:var(--serif);font-weight:400;font-size:1.32rem;letter-spacing:.14em;color:var(--olive-deep);line-height:1}
+.brand small{display:block;font-size:.78rem;letter-spacing:.3em;color:var(--leaf);margin-top:5px;line-height:1}
+.nav{display:flex;align-items:center;gap:2px}
+.nav a{padding:8px 12px;text-decoration:none;font-size:.95rem;font-weight:500;color:var(--muted);border-radius:999px;transition:color .2s,background .2s}
+.nav a:hover,.nav a.active{color:var(--olive-deep);background:var(--mist)}
+.nav .btn{margin-left:10px;min-height:44px;padding:0 20px;color:#fff}
+.nav .btn:hover{background:var(--olive-deep);color:#fff}
+.menu-btn{display:none;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:#fff;cursor:pointer;position:relative}
+.menu-btn span{position:absolute;left:13px;width:20px;height:2px;background:var(--olive);transition:transform .25s,opacity .2s}
+.menu-btn span:nth-child(1){top:16px}.menu-btn span:nth-child(2){top:22px}.menu-btn span:nth-child(3){top:28px}
+.menu-btn[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menu-btn[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+/* banner */
+.banner{position:relative;overflow:hidden;background:var(--olive-deep);
+  color:#E9EFDF;text-align:center;
+  padding:calc(var(--header-h) + env(safe-area-inset-top,0px) + 56px) 0 clamp(120px,14vw,190px)}
+.banner-in{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center}
+/* background video, softly blurred, under a green tint */
+.banner-media{position:absolute;inset:0;z-index:0;background:var(--olive-deep) url(assets/images/banner-poster-mobile.webp) center 62%/cover no-repeat}
+.banner-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 62%;transform:scale(1.04)}
+/* computers and tablets in landscape: the 16:9 mortar clip */
+@media (min-width:768px) and (min-aspect-ratio:1/1){
+  .banner-media{background-image:url(assets/images/banner-poster-desktop.webp);background-position:30% 50%}
+  .banner-media video{object-position:30% 50%}
+  /* the white marble scene needs a deeper wash than the leaves */
+  .banner-media::after{content:"";position:absolute;inset:0;background:rgba(36,57,18,.42);mix-blend-mode:multiply}
+}
+.banner-tint{position:absolute;inset:0;z-index:1;pointer-events:none;background:
+  linear-gradient(180deg,rgba(20,34,10,.62) 0%,rgba(20,34,10,0) 26%),
+  linear-gradient(0deg,rgba(20,34,10,.35) 0%,rgba(20,34,10,0) 30%),
+  radial-gradient(ellipse 62% 58% at 50% 52%,rgba(30,48,14,.66) 0%,rgba(36,57,18,.46) 100%)}
+.banner h1,.banner .lead,.banner-facts{text-shadow:0 1px 18px rgba(15,26,8,.35)}
+
+/* logo badge with gold rings that draw themselves */
+.badge{position:relative;width:clamp(176px,20vw,236px);aspect-ratio:1;margin-bottom:34px}
+.badge .disc{position:absolute;inset:8%;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 30px 60px -22px rgba(0,0,0,.55)}
+.badge .disc img{width:92%}
+.badge .rings{position:absolute;inset:0;width:100%;height:100%;overflow:visible;transform:rotate(-90deg)}
+.badge .rings circle{fill:none}
+.badge .r1{stroke:#D6B06E;stroke-width:1.5}
+.badge .r2{stroke:rgba(255,255,255,.55);stroke-width:1}
+.badge .dot{fill:#D6B06E}
+.badge .orbit{opacity:0}
+.banner h1{color:#fff;max-width:17ch;margin-bottom:22px}
+.banner .lead{color:#D6E0C8;margin:0 auto 34px;max-width:58ch}
+.banner .actions{justify-content:center}
+.btn-ghost{border-color:rgba(255,255,255,.55);color:#fff;background:transparent}
+.btn-ghost:hover{background:rgba(255,255,255,.12);border-color:#fff}
+.banner-facts{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 44px;margin-top:48px;padding-top:26px;border-top:1px solid rgba(214,176,110,.45)}
+.banner-facts div{font-size:.95rem;line-height:1.4;color:#C9D6B9}
+.banner-facts strong{display:block;font-family:var(--serif);font-weight:400;font-size:1.2rem;color:#fff}
+.banner-edge{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:clamp(70px,9vw,120px);z-index:2}
+.banner-edge .fill{fill:#fff}
+.banner-edge .stroke{fill:none;stroke:#D6B06E;stroke-width:1.5;vector-effect:non-scaling-stroke}
+
+.arch{position:relative;aspect-ratio:4/5;width:100%;max-width:440px;margin-inline:auto}
+.arch-fill{position:absolute;inset:0;-webkit-mask:var(--arch) center/100% 100% no-repeat;mask:var(--arch) center/100% 100% no-repeat;background:var(--mist)}
+.arch-line{position:absolute;inset:-14px;width:calc(100% + 28px);height:calc(100% + 28px);overflow:visible}
+.arch-line path{fill:none;stroke:var(--gold);stroke-width:1.2;vector-effect:non-scaling-stroke}
+
+/* sections */
+section{scroll-margin-top:calc(var(--header-h) + 12px)}
+.sec{padding:clamp(72px,9vw,112px) 0}
+.sec-mist{background:var(--mist)}
+.sec-head{max-width:720px;margin-bottom:52px}
+.sec-head h2{margin-bottom:16px}
+.sec-head.center{margin-inline:auto;text-align:center}
+.sec-head.center .lead{margin-inline:auto}
+
+/* initiative */
+.initiative{position:relative;overflow:hidden}
+.init-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.init-quote{font-family:var(--serif);font-size:clamp(1.7rem,3vw,2.5rem);line-height:1.25;color:var(--olive-deep)}
+.pillars{display:grid;margin-top:34px}
+.pillar{padding:22px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:40px 1fr;gap:16px}
+.pillar:last-child{border-bottom:1px solid var(--line)}
+.pillar svg{width:28px;height:28px;color:var(--leaf);margin-top:4px}
+.pillar h3{font-size:1.3rem;margin-bottom:4px}
+.pillar p{color:var(--muted);font-size:1rem}
+
+/* about clinic */
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.about-grid .arch{max-width:400px}
+.about-grid .arch-fill{background:var(--olive);display:grid;place-items:center;padding:22% 14% 10%;color:#fff;text-align:center}
+.about-grid .arch-fill p{font-family:var(--serif);font-size:clamp(1.25rem,2.2vw,1.6rem);line-height:1.35}
+.about-grid .arch-fill span{display:block;font-family:var(--sans);font-size:.95rem;color:#D6B06E;margin-top:18px}
+.about-copy p+p{margin-top:16px}
+.about-copy .lead{max-width:none}
+.values{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:36px}
+.values div{border-top:2px solid var(--gold);padding-top:14px}
+.values strong{display:block;font-family:var(--serif);font-weight:400;font-size:1.15rem;color:var(--olive-deep);margin-bottom:4px}
+.values span{font-size:.95rem;color:var(--muted);line-height:1.55;display:block}
+
+/* doctor */
+.doc-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:64px;align-items:center}
+.doc-photo{position:relative}
+.doc-photo .arch-fill{background:var(--mist-2)}
+.focus-tags span{background:var(--mist)}
+.doc-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 12%}
+.doc-initials{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--serif);font-size:clamp(4rem,9vw,6.5rem);color:var(--olive);padding-top:12%}
+.doc-name{margin-bottom:6px}
+.doc-deg{font-weight:600;color:var(--leaf);margin-bottom:22px;font-size:1.05rem}
+.doc-copy p+p{margin-top:16px}
+.cred{display:grid;grid-template-columns:repeat(2,1fr);gap:0 28px;margin:30px 0 34px;padding:0;list-style:none}
+.cred li{padding:14px 0;border-bottom:1px solid var(--line);font-size:.98rem;color:var(--muted);line-height:1.5}
+.cred strong{display:block;color:var(--olive-deep);font-weight:600}
+.focus-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.focus-tags span{font-size:.9rem;padding:5px 14px;border-radius:999px;background:var(--mist);color:var(--olive-deep);border:1px solid var(--line)}
+
+/* consultation */
+.modes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:64px}
+.mode{background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px 28px}
+.mode svg{width:34px;height:34px;color:var(--leaf);margin-bottom:16px}
+.mode h3{margin-bottom:8px}
+.mode p{color:var(--muted);font-size:1rem}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:0;counter-reset:s;position:relative}
+.steps::before{content:"";position:absolute;top:22px;left:10%;right:10%;height:1px;background:var(--gold);opacity:.6}
+.steps li{counter-increment:s;text-align:center;padding:0 12px;position:relative}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:44px;height:44px;margin:0 auto 16px;border-radius:50%;background:#fff;border:1.5px solid var(--olive);font-family:var(--serif);font-size:1.2rem;color:var(--olive);position:relative}
+.steps h3{font-size:1.15rem;margin-bottom:6px}
+.steps p{font-size:.93rem;color:var(--muted);line-height:1.55}
+.steps-title{font-family:var(--serif);font-size:1.5rem;color:var(--olive-deep);text-align:center;margin-bottom:36px}
+
+/* treatments */
+.svc{display:grid;grid-template-columns:repeat(2,1fr);gap:0 56px}
+.svc article{display:grid;grid-template-columns:52px 1fr;gap:18px;padding:28px 0;border-top:1px solid var(--line)}
+.svc article:nth-last-child(-n+2){border-bottom:1px solid var(--line)}
+.svc .ic{width:52px;height:52px;border-radius:50%;background:var(--mist);display:grid;place-items:center;color:var(--olive)}
+.svc .ic svg{width:26px;height:26px}
+.svc h3{margin-bottom:6px}
+.svc p{color:var(--muted);font-size:1rem}
+
+/* conditions */
+.cond{display:grid;grid-template-columns:repeat(auto-fill,minmax(205px,1fr));gap:16px}
+.cond div{background:var(--mist);border-radius:14px;padding:22px 22px 20px;border-left:3px solid var(--leaf)}
+.cond strong{display:block;font-family:var(--serif);font-weight:400;font-size:1.2rem;color:var(--olive-deep);margin-bottom:4px;line-height:1.3}
+.cond span{font-size:.95rem;color:var(--muted);line-height:1.55;display:block}
+.note{margin-top:30px;font-size:.93rem;color:var(--muted);max-width:75ch}
+
+/* panchakarma */
+.pk-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:start}
+.pk-list{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.pk-list div{padding:24px;border:1px solid var(--line);border-radius:16px;background:#fff}
+.pk-list h3{font-size:1.3rem;margin-bottom:6px}
+.pk-list p{font-size:.97rem;color:var(--muted)}
+.pk-aside{position:sticky;top:calc(var(--header-h) + 30px)}
+.pk-aside p+p{margin-top:14px}
+.pk-aside .btn{margin-top:28px}
+
+/* faq */
+.faq{max-width:820px;margin-inline:auto}
+.faq details{border-bottom:1px solid var(--line)}
+.faq details:first-child{border-top:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;padding:22px 4px;font-family:var(--serif);font-size:1.22rem;color:var(--olive-deep)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:12px;height:12px;margin-top:8px;border-right:1.5px solid var(--olive);border-bottom:1.5px solid var(--olive);transform:rotate(45deg);transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(-135deg);margin-top:14px}
+.faq details p{padding:0 4px 22px;color:var(--muted);max-width:68ch}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.c-list{list-style:none;padding:0;margin:30px 0}
+.c-list li{display:grid;grid-template-columns:44px 1fr;gap:14px;padding:16px 0;border-top:1px solid var(--line)}
+.c-list li:last-child{border-bottom:1px solid var(--line)}
+.c-list .ic{width:44px;height:44px;border-radius:50%;background:var(--mist);display:grid;place-items:center;color:var(--olive)}
+.c-list .ic svg{width:20px;height:20px}
+.c-list strong{display:block;color:var(--olive-deep);font-weight:600;line-height:1.4}
+.c-list a,.c-list span{color:var(--muted);text-decoration:none;word-break:break-word}
+.c-list a:hover{color:var(--olive)}
+.alert{font-size:.92rem;background:#FBF5EA;border-left:3px solid var(--gold);padding:14px 16px;border-radius:0 10px 10px 0;color:#5C4A26}
+.form-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:clamp(24px,4vw,40px);box-shadow:0 24px 60px -30px rgba(36,57,18,.35)}
+.form-card h3{margin-bottom:8px}
+.form-card>p{color:var(--muted);font-size:.98rem;margin-bottom:26px}
+.fgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.full{grid-column:1/-1}
+.field label{display:block;font-size:.92rem;font-weight:600;color:var(--olive-deep);margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;font:inherit;font-size:1rem;color:var(--ink);background:var(--white);border:1px solid rgba(52,80,28,.28);border-radius:12px;padding:12px 14px;min-height:50px;transition:border-color .2s,box-shadow .2s}
+.field textarea{min-height:110px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--olive);box-shadow:0 0 0 3px rgba(94,127,30,.18)}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:.93rem;color:var(--muted)}
+.consent input{width:20px;height:20px;margin-top:3px;accent-color:var(--olive);flex:none}
+.form-foot{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:6px}
+.status{font-size:.95rem;color:var(--olive)}
+.status.err{color:#9B3B1E}
+
+/* footer */
+.site-footer{background:var(--olive-deep);color:#C9D4BC;padding:64px 0 calc(28px + env(safe-area-inset-bottom,0px))}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+.foot-brand{display:flex;gap:16px;align-items:center;margin-bottom:16px}
+.foot-brand .disc{width:72px;height:72px;border-radius:50%;background:#fff;display:grid;place-items:center;flex:none}
+.foot-brand .disc img{width:52px}
+.foot-brand b{font-family:var(--serif);font-weight:400;font-size:1.4rem;color:#fff;letter-spacing:.12em;display:block;line-height:1.1}
+.foot-brand small{color:#D6B06E;letter-spacing:.08em}
+.site-footer h4{font-family:var(--sans);font-weight:600;color:#fff;font-size:1rem;margin-bottom:14px}
+.site-footer ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.site-footer a{text-decoration:none;color:#C9D4BC}
+.site-footer a:hover{color:#fff}
+.foot-bottom{margin-top:48px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:.88rem;color:#9FAE8E}
+
+/* floating actions */
+.float{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:900;display:flex;flex-direction:column;gap:10px}
+.float a,.float button{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;border:none;cursor:pointer;box-shadow:0 10px 26px -8px rgba(0,0,0,.35);text-decoration:none}
+.float .wa{background:#25D366;color:#fff}
+.float .top{background:#fff;color:var(--olive);border:1px solid var(--line);opacity:0;pointer-events:none;transition:opacity .25s}
+.float .top.show{opacity:1;pointer-events:auto}
+.float svg{width:24px;height:24px}
+[hidden]{display:none!important}
+
+/* page-load sequence: header drops in, logo settles, rings draw, text rises in turn */
+@media (prefers-reduced-motion:no-preference){
+  .brand,.menu-btn{animation:fade-down .7s cubic-bezier(.16,1,.3,1) both}
+  @media (min-width:981px){.nav{animation:fade-down .7s cubic-bezier(.16,1,.3,1) both .1s}}
+  .badge .disc{animation:settle 1s cubic-bezier(.16,1,.3,1) both .15s}
+  .badge .rings circle{stroke-dasharray:1;stroke-dashoffset:1}
+  .badge .r1{animation:ring 1.8s cubic-bezier(.65,0,.35,1) forwards .45s}
+  .badge .r2{animation:ring 1.8s cubic-bezier(.65,0,.35,1) forwards .75s;transform:scaleY(-1);transform-box:view-box;transform-origin:100px 100px}
+  .badge .orbit{transform-box:view-box;transform-origin:100px 100px;opacity:0;animation:travel 1.8s cubic-bezier(.65,0,.35,1) forwards .45s}
+  .rise{animation:fade-up .8s cubic-bezier(.16,1,.3,1) both}
+  .d1{animation-delay:.5s}.d2{animation-delay:.62s}.d3{animation-delay:.74s}.d4{animation-delay:.86s}
+  .banner-edge .stroke{stroke-dasharray:3200;stroke-dashoffset:3200;animation:draw 2.4s ease forwards .9s}
+}
+@keyframes fade-up{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes fade-down{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:none}}
+@keyframes settle{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:none}}
+@keyframes ring{to{stroke-dashoffset:0}}
+@keyframes travel{0%{opacity:0;transform:rotate(0)}8%{opacity:1}90%{opacity:1}100%{opacity:0;transform:rotate(360deg)}}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+@media (min-width:981px){
+  .site-header:not(.scrolled) .nav a:not(.btn){color:rgba(255,255,255,.86)}
+  .site-header:not(.scrolled) .nav a:not(.btn):hover{color:#fff;background:rgba(255,255,255,.12)}
+  .site-header:not(.scrolled) .nav .btn{background:#fff;color:var(--olive-deep)}
+}
+/* responsive */
+@media (max-width:1080px){
+  .nav a{padding:8px 9px;font-size:.9rem}
+}
+@media (max-width:980px){
+  .menu-btn{display:block}
+  .nav{position:fixed;left:0;right:0;top:calc(var(--header-h) + env(safe-area-inset-top,0px));bottom:0;background:#fff;flex-direction:column;align-items:stretch;padding:18px 20px calc(24px + env(safe-area-inset-bottom,0px));gap:4px;transform:translateX(100%);transition:transform .3s ease;overflow-y:auto;visibility:hidden}
+  .nav.open{transform:none;visibility:visible}
+  .nav a{font-size:1.1rem;padding:14px 16px;border-radius:12px}
+  .nav .btn{margin:14px 0 0;min-height:52px}
+  .init-grid,.about-grid,.doc-grid,.pk-grid,.contact-grid{grid-template-columns:1fr;gap:44px}
+  .about-grid .arch{max-width:340px}
+  .doc-photo .arch{max-width:340px}
+  .pk-aside{position:static}
+  .modes{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr;gap:0;text-align:left}
+  .steps::before{top:22px;bottom:22px;left:22px;right:auto;width:1px;height:auto}
+  .steps li{display:grid;grid-template-columns:44px 1fr;gap:0 18px;text-align:left;padding:0 0 26px}
+  .steps li::before{margin:0;grid-row:span 2}
+  .steps-title{text-align:left}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .foot-grid>div:first-child{grid-column:1/-1}
+}
+@media (max-width:680px){
+  :root{--header-h:66px;--wrap:calc(100% - 32px)}
+  .brand .mk{width:42px;height:42px}
+  .brand .mk img{width:30px}
+  .brand b{font-size:1.1rem}
+  .brand small{font-size:.7rem}
+  .banner{padding-top:calc(var(--header-h) + env(safe-area-inset-top,0px) + 32px)}
+  .banner-facts{gap:16px 28px}
+  .banner-facts div{flex:1 1 40%}
+  .actions .btn{flex:1 1 100%}
+  .values{grid-template-columns:1fr;gap:16px}
+  .cred{grid-template-columns:1fr}
+  .svc{grid-template-columns:1fr}
+  .svc article:nth-last-child(2){border-bottom:none}
+  .pk-list{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- reusable icons -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14"/><path d="M5 19 14 10"/></symbol>
+  <symbol id="i-root" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v9"/><path d="M12 6c-2-2-5-2-6-1 1 2 4 3 6 1Z"/><path d="M12 11c0 4-3 6-6 9M12 11c0 4 3 6 6 9M12 11v11"/></symbol>
+  <symbol id="i-person" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></symbol>
+  <symbol id="i-cycle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 0 1-14 5"/><path d="M4 12a8 8 0 0 1 14-5"/><path d="M18 3v4h-4M6 21v-4h4"/></symbol>
+  <symbol id="i-clinic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V9l7-5 7 5v12"/><path d="M12 10v6M9 13h6"/></symbol>
+  <symbol id="i-video" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+  <symbol id="i-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-5 4 10 2-5h6"/></symbol>
+  <symbol id="i-mortar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18a9 9 0 0 1-18 0Z"/><path d="M9 20h6M13 11l6-8"/></symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 7 6 11a6 6 0 0 1-12 0c0-4 6-11 6-11Z"/></symbol>
+  <symbol id="i-bowl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18a9 9 0 0 1-18 0Z"/><path d="M8 8c0-2 2-2 2-4M13 8c0-2 2-2 2-4"/></symbol>
+  <symbol id="i-yoga" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4.5" r="2"/><path d="M12 7v6M5 10l7 2 7-2M7 20l5-7 5 7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-7 7-12a7 7 0 0 0-14 0c0 5 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="i-orn" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1c1.2 3 2.8 5 7 7-4.2 2-5.8 4-7 7-1.2-3-2.8-5-7-7 4.2-2 5.8-4 7-7Z"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2s.2-1.1.2-1.2-.2-.2-.5-.3Z"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
+</svg>
+
+<header class="site-header" id="header">
+  <div class="wrap header-in">
+    <a class="brand" href="#top" aria-label="Shukart Ayurveda home">
+      <span class="mk"><img src="assets/images/logo-mark.webp" alt="" width="36" height="33"></span>
+      <span><b>SHUKART</b><small>AYURVEDA</small></span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#initiative">Initiative</a>
+      <a href="#about">About</a>
+      <a href="#doctor">Doctor</a>
+      <a href="#consultation">Consultation</a>
+      <a href="#treatments">Treatments</a>
+      <a href="#panchakarma">Panchakarma</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-solid" href="#book">Book consultation</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<!-- BANNER -->
+<section class="banner" id="top">
+  <div class="banner-media" aria-hidden="true">
+    <!-- wide screens play banner-desktop.mp4 (16:9), phones play banner-mobile.mp4 (9:16) -->
+    <video id="bannerVideo" muted loop playsinline preload="none"
+      data-desktop="assets/video/banner-desktop.mp4" data-desktop-poster="assets/images/banner-poster-desktop.webp"
+      data-mobile="assets/video/banner-mobile.mp4" data-mobile-poster="assets/images/banner-poster-mobile.webp"
+      disablepictureinpicture></video>
+  </div>
+  <div class="banner-tint" aria-hidden="true"></div>
+  <div class="wrap banner-in">
+    <div class="badge">
+      <svg class="rings" viewBox="0 0 200 200" aria-hidden="true">
+        <circle class="r1" cx="100" cy="100" r="97" pathLength="1"/>
+        <circle class="r2" cx="100" cy="100" r="91" pathLength="1"/>
+      </svg>
+      <svg class="rings orbit-svg" viewBox="0 0 200 200" aria-hidden="true"><g class="orbit"><circle class="dot" r="3.2" cx="197" cy="100"/></g></svg>
+      <div class="disc"><img src="assets/images/logo.webp" alt="Shukart Ayurveda logo: Rejuvenate, Wellness, Healing" width="620" height="620"></div>
+    </div>
+    <h1 class="rise d1">Healing at the root, not just the symptom.</h1>
+    <p class="lead rise d2">Shukart Ayurveda finds the imbalance behind your illness and treats it with classical medicine, Panchakarma, diet, yoga and daily routine, chosen for you and only what you need.</p>
+    <div class="actions rise d3">
+      <a class="btn btn-white" href="#book">Book a consultation</a>
+      <a class="btn btn-ghost" href="#treatments">See treatments</a>
+    </div>
+    <div class="banner-facts rise d4">
+      <div><strong>MD, Kayachikitsa</strong>Specialist physician</div>
+      <div><strong>In-clinic &amp; online</strong>Greater Noida and remote</div>
+      <div><strong>Root-cause care</strong>Not symptom suppression</div>
+    </div>
+  </div>
+  <svg class="banner-edge" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+    <path class="fill" d="M0 120V92C420 92 610 74 688 40C706 32 716 16 720 0C724 16 734 32 752 40C830 74 1020 92 1440 92V120Z"/>
+    <path class="stroke" d="M0 84C420 84 604 66 682 32C700 24 712 10 720 -8C728 10 740 24 758 32C836 66 1020 84 1440 84"/>
+  </svg>
+</section>
+
+<!-- INITIATIVE -->
+<section class="sec initiative" id="initiative">
+  <div class="wrap init-grid">
+    <div>
+      <div class="orn"><svg><use href="#i-orn"/></svg></div>
+      <p class="init-quote">Shukart Ayurveda is working on an initiative to treat disease at its root, so that recovery lasts instead of returning every season.</p>
+    </div>
+    <div>
+      <p class="lead">Most chronic problems, from acidity and fatty liver to joint pain and poor sleep, keep coming back because only the surface is treated. Ayurveda asks a different question: why did this imbalance start, and what keeps feeding it?</p>
+      <div class="pillars">
+        <div class="pillar"><svg><use href="#i-root"/></svg><div><h3>Find the cause</h3><p>Every case is traced through digestion (Agni), dosha, tissues and daily habits to the disease process, known as Samprapti.</p></div></div>
+        <div class="pillar"><svg><use href="#i-person"/></svg><div><h3>Treat the person</h3><p>Two people with the same diagnosis may need different care. Plans are built around your body, age, strength and routine.</p></div></div>
+        <div class="pillar"><svg><use href="#i-cycle"/></svg><div><h3>Prevent the return</h3><p>Diet, routine and Rasayana care help the body hold its balance, so the aim is lasting health, not repeated treatment.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT CLINIC -->
+<section class="sec sec-mist" id="about">
+  <div class="wrap about-grid">
+    <div class="arch">
+      <div class="arch-fill"><p>Rejuvenate. Wellness. Healing.<span>The three promises in our name and our logo.</span></p></div>
+      <svg class="arch-line" viewBox="0 0 400 500" preserveAspectRatio="none" aria-hidden="true"><path d="M0 500V190C0 105 88 66 148 48C178 39 194 22 200 0C206 22 222 39 252 48C312 66 400 105 400 190V500"/></svg>
+    </div>
+    <div class="about-copy">
+      <div class="orn"><svg><use href="#i-orn"/></svg></div>
+      <h2 style="margin-bottom:20px">About Shukart Ayurveda</h2>
+      <p class="lead">Shukart Ayurveda is a clinic in Greater Noida built on one belief: real healing starts by understanding the body from within.</p>
+      <p>We bring together Ayurvedic medicine, Nadi Pariksha, Panchakarma, diet, yoga and lifestyle guidance, and use them according to what each patient actually needs. There are no fixed packages here. You may come to us for complete care, or for one specific need such as a diet plan, yoga guidance or a Panchakarma consultation.</p>
+      <p>Every plan is explained clearly, reviewed regularly and adjusted as you improve.</p>
+      <div class="values">
+        <div><strong>Root-focused</strong><span>We look for the underlying imbalance, not just the visible symptom.</span></div>
+        <div><strong>Integrated</strong><span>Medicine, food, movement, routine and therapy, working together.</span></div>
+        <div><strong>Honest</strong><span>No cure promises. Suitability and outcomes are discussed after assessment.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOCTOR -->
+<section class="sec" id="doctor">
+  <div class="wrap doc-grid">
+    <div class="doc-photo">
+      <div class="arch">
+        <div class="arch-fill">
+          <img src="assets/images/doctor.webp" alt="Dr. Shushma Sharma, Ayurvedic physician, in a white coat with a stethoscope" width="720" height="864" loading="lazy">
+        </div>
+        <svg class="arch-line" viewBox="0 0 400 500" preserveAspectRatio="none" aria-hidden="true"><path d="M0 500V190C0 105 88 66 148 48C178 39 194 22 200 0C206 22 222 39 252 48C312 66 400 105 400 190V500"/></svg>
+      </div>
+    </div>
+    <div class="doc-copy">
+      <div class="orn"><svg><use href="#i-orn"/></svg></div>
+      <h2 class="doc-name">Dr. Shushma Sharma</h2>
+      <p class="doc-deg">BAMS, MD (Kayachikitsa) · Founder, Shukart Ayurveda</p>
+      <p>Dr. Shushma Sharma is an Ayurvedic physician with a postgraduate specialisation in Kayachikitsa, the branch of Ayurveda that deals with internal medicine. Her practice rests on careful assessment, responsible choice of treatment, and clear guidance so that every patient understands their own plan.</p>
+      <p>She leads the clinic's root-cause initiative, and treats chronic conditions through Ayurvedic medicine supported by diet, yoga, lifestyle correction and Panchakarma where needed.</p>
+      <div class="focus-tags" aria-label="Areas of focus">
+        <span>Digestive disorders</span><span>Kidney care</span><span>Metabolic disorders</span><span>Fatty liver</span><span>Mind detox</span><span>Rasayana</span><span>Preventive cardiac care</span>
+      </div>
+      <ul class="cred">
+        <li><strong>BAMS</strong>Bachelor of Ayurvedic Medicine and Surgery</li>
+        <li><strong>MD, Kayachikitsa</strong>Postgraduate in Ayurvedic internal medicine</li>
+        <li><strong>Research-oriented</strong>Published academic work in Ayurveda</li>
+        <li><strong>Personal follow-up</strong>Progress reviewed and treatment refined</li>
+      </ul>
+      <a class="btn btn-solid" href="#book">Consult Dr. Sharma</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONSULTATION -->
+<section class="sec sec-mist" id="consultation">
+  <div class="wrap">
+    <div class="sec-head center">
+      <div class="orn center"><svg><use href="#i-orn"/></svg></div>
+      <h2>Consultation</h2>
+      <p class="lead">Choose the way that suits you. The first consultation is unhurried, because the plan depends on understanding your full health story.</p>
+    </div>
+    <div class="modes">
+      <div class="mode"><svg><use href="#i-clinic"/></svg><h3>In-clinic visit</h3><p>A full examination at the clinic in Greater Noida, including Nadi Pariksha and Prakriti assessment.</p></div>
+      <div class="mode"><svg><use href="#i-video"/></svg><h3>Online consultation</h3><p>A video consultation for suitable cases, useful for follow-ups or if you live outside Delhi NCR.</p></div>
+      <div class="mode"><svg><use href="#i-phone"/></svg><h3>Callback first</h3><p>Not sure where to start? Share your concern and the clinic will call you to guide the next step.</p></div>
+    </div>
+    <p class="steps-title">How your treatment is planned</p>
+    <ol class="steps">
+      <li><h3>Your story</h3><p>Main concern, history, past treatment, digestion, sleep, stress and routine.</p></li>
+      <li><h3>Examination</h3><p>Prakriti, Vikriti and doshic patterns, with Nadi Pariksha where appropriate.</p></li>
+      <li><h3>Finding the root</h3><p>The disease process: dosha, dhatu, srotas, Agni and contributing habits.</p></li>
+      <li><h3>Your plan</h3><p>Only what you need: medicine, Panchakarma, diet, yoga, routine, or a mix.</p></li>
+      <li><h3>Review</h3><p>Progress is checked and the plan is refined as you improve.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- TREATMENTS -->
+<section class="sec" id="treatments">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="orn"><svg><use href="#i-orn"/></svg></div>
+      <h2>What we offer</h2>
+      <p class="lead">One healing system, adapted to you. Treatment may use one or several of these, depending on your diagnosis and stage of illness.</p>
+    </div>
+    <div class="svc">
+      <article><span class="ic"><svg><use href="#i-person"/></svg></span><div><h3>Ayurvedic consultation</h3><p>A detailed look at your symptoms, history, digestion, sleep, stress and lifestyle.</p></div></article>
+      <article><span class="ic"><svg><use href="#i-pulse"/></svg></span><div><h3>Nadi Pariksha</h3><p>Traditional pulse assessment, used within a wider clinical evaluation of your constitution and doshas.</p></div></article>
+      <article><span class="ic"><svg><use href="#i-mortar"/></svg></span><div><h3>Ayurvedic medicines</h3><p>Classical formulations prescribed for your diagnosis, age, strength, digestion and other conditions.</p></div></article>
+      <article><span class="ic"><svg><use href="#i-drop"/></svg></span><div><h3>Panchakarma</h3><p>Physician-guided purification and restorative therapies, advised only after checking suitability.</p></div></article>
+      <article><span class="ic"><svg><use href="#i-bowl"/></svg></span><div><h3>Diet and Pathya guidance</h3><p>What to eat, when to eat, which combinations to avoid, and habits that help or slow recovery.</p></div></article>
+      <article><span class="ic"><svg><use href="#i-yoga"/></svg></span><div><h3>Yoga and Dinacharya</h3><p>Movement, breathing, sleep and daily and seasonal routine, suited to your condition.</p></div></article>
+    </div>
+
+    <div class="sec-head" style="margin:88px 0 36px">
+      <h2 style="font-size:clamp(1.6rem,2.6vw,2.2rem)">Specialised areas of care</h2>
+      <p class="lead">Conditions Dr. Sharma treats through Ayurvedic medicine and integrated care.</p>
+    </div>
+    <div class="cond">
+      <div><strong>Digestive (GIT) disorders</strong><span>Acidity, IBS, constipation and other gastrointestinal complaints.</span></div>
+      <div><strong>Kidney disorders</strong><span>Supportive Ayurvedic management based on your clinical condition.</span></div>
+      <div><strong>Metabolic disorders</strong><span>Diabetes, thyroid and weight concerns, through medicine, food and routine.</span></div>
+      <div><strong>Fatty liver and cirrhosis</strong><span>Ayurvedic support for liver conditions after detailed assessment.</span></div>
+      <div><strong>Mind detox</strong><span>Care for mental calm, clarity, better sleep and inner balance.</span></div>
+      <div><strong>Bone rejuvenation</strong><span>Rasayana-based support for bone strength and nourishment.</span></div>
+      <div><strong>Immunomodulation</strong><span>Measures to support balanced immune function.</span></div>
+      <div><strong>Rasayana therapy</strong><span>Rejuvenative care that nourishes the body and supports healing.</span></div>
+      <div><strong>Internal healing</strong><span>Restoring internal balance rather than only suppressing symptoms.</span></div>
+      <div><strong>Preventive cardiac care</strong><span>Guidance on risk factors, diet and routine for long-term heart health.</span></div>
+    </div>
+    <p class="note">Suitability, scope of treatment and expected results are discussed only after consultation. This website does not make cure claims and does not replace emergency or specialist hospital care.</p>
+  </div>
+</section>
+
+<!-- PANCHAKARMA -->
+<section class="sec sec-mist" id="panchakarma">
+  <div class="wrap pk-grid">
+    <div class="pk-aside">
+      <div class="orn"><svg><use href="#i-orn"/></svg></div>
+      <h2 style="margin-bottom:20px">Panchakarma and therapies</h2>
+      <p class="lead">Panchakarma is a medical process, not a spa menu.</p>
+      <p>Each therapy is chosen after assessment, prepared for properly, supervised through the procedure, and followed by the right diet and post-therapy care.</p>
+      <a class="btn btn-line" href="#book">Ask about Panchakarma</a>
+    </div>
+    <div class="pk-list">
+      <div><h3>Abhyanga</h3><p>Therapeutic full-body oil application, with oils chosen for you and your treatment goal.</p></div>
+      <div><h3>Swedana</h3><p>Supervised herbal steam, used to prepare the body or support other therapies.</p></div>
+      <div><h3>Basti</h3><p>A classical Panchakarma procedure whose type and schedule are set by the physician.</p></div>
+      <div><h3>Nasya</h3><p>Medicated nasal therapy for conditions of the head, neck and senses.</p></div>
+      <div><h3>Shirodhara</h3><p>A steady stream of warm oil on the forehead, used for stress, sleep and mental calm.</p></div>
+      <div><h3>Virechana</h3><p>Guided therapeutic purgation, advised only when suitable after careful preparation.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="sec-head center">
+      <div class="orn center"><svg><use href="#i-orn"/></svg></div>
+      <h2>Before your visit</h2>
+      <p class="lead">General answers. The doctor will advise what is right for you after assessing your case.</p>
+    </div>
+    <div class="faq">
+      <details><summary>What should I bring to my first consultation?</summary><p>Your prescriptions, test reports, the list of medicines you currently take, and a short history of your main concern. This keeps the consultation accurate and saves time.</p></details>
+      <details><summary>Is Panchakarma suitable for everyone?</summary><p>No. It depends on your age, strength, diagnosis, stage of illness and other health factors. The doctor will assess you before recommending any procedure.</p></details>
+      <details><summary>Can I take Ayurvedic and allopathic medicines together?</summary><p>Please don't stop or combine medicines on your own. Share your full medicine list during consultation so the doctor can advise safely and coordinate with your other doctors if needed.</p></details>
+      <details><summary>Do you offer online consultations?</summary><p>Yes, for suitable cases. Some conditions may still need a physical examination at the clinic.</p></details>
+      <details><summary>How long does Ayurvedic treatment take?</summary><p>It depends on the condition, how long you have had it, your strength and how closely the plan is followed. You'll get a realistic timeline after assessment.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec sec-mist" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <div class="orn"><svg><use href="#i-orn"/></svg></div>
+      <h2 style="margin-bottom:16px">Contact and appointments</h2>
+      <p class="lead">Share your details and health concern. The clinic will review them and call you to plan the next step.</p>
+      <ul class="c-list">
+        <li><span class="ic"><svg><use href="#i-pin"/></svg></span><div><strong>Location</strong><span>Greater Noida, Uttar Pradesh</span></div></li>
+        <li><span class="ic"><svg><use href="#i-mail"/></svg></span><div><strong>Email</strong><a href="mailto:Shukart.Ayurveda@gmail.com">Shukart.Ayurveda@gmail.com</a></div></li>
+        <li data-phone hidden><span class="ic"><svg><use href="#i-phone"/></svg></span><div><strong>Phone</strong><a data-phone-link href="#"></a></div></li>
+      </ul>
+      <p class="alert"><strong>Not for emergencies.</strong> For severe or urgent symptoms, call 112 or go to the nearest hospital.</p>
+    </div>
+
+    <div class="form-card" id="book">
+      <h3>Book a consultation</h3>
+      <p>Come for complete care, or for one need such as diet, yoga, medicine, Panchakarma or Nadi assessment.</p>
+      <form id="form" novalidate>
+        <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+        <div class="fgrid">
+          <div class="field"><label for="name">Patient name *</label><input id="name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="age">Age *</label><input id="age" name="age" type="number" min="0" max="120" inputmode="numeric" required></div>
+          <div class="field"><label for="phone">Phone number *</label><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required></div>
+          <div class="field"><label for="city">City *</label><input id="city" name="city" autocomplete="address-level2" required></div>
+          <div class="field"><label for="gender">Gender</label><select id="gender" name="gender"><option value="">Select</option><option>Female</option><option>Male</option><option>Other</option><option>Prefer not to say</option></select></div>
+          <div class="field"><label for="mode">Consultation mode *</label><select id="mode" name="mode" required><option value="">Select</option><option>In-clinic visit</option><option>Online consultation</option><option>Callback first</option></select></div>
+          <div class="field full"><label for="service">What do you need help with? *</label><select id="service" name="service" required><option value="">Select one</option><option>Complete Ayurvedic consultation</option><option>Ayurvedic medicine</option><option>Diet guidance</option><option>Yoga guidance</option><option>Lifestyle guidance</option><option>Panchakarma consultation</option><option>Nadi Pariksha</option><option>Mind detox treatment</option><option>Rasayana / rejuvenation</option><option>Preventive cardiac care</option><option>Other</option></select></div>
+          <div class="field full"><label for="concern">Main health concern *</label><textarea id="concern" name="concern" required placeholder="What is troubling you, and for how long?"></textarea></div>
+          <div class="field full"><label for="meds">Current medicines or reports</label><textarea id="meds" name="meds" placeholder="Optional"></textarea></div>
+          <div class="field"><label for="time">Best time to call</label><select id="time" name="time"><option>Any time</option><option>Morning</option><option>Afternoon</option><option>Evening</option></select></div>
+          <div class="field"><label for="date">Preferred date</label><input id="date" name="date" type="date"></div>
+          <label class="consent full"><input type="checkbox" name="consent" required> I agree to the clinic storing these details and contacting me about my consultation.</label>
+          <div class="form-foot full">
+            <button class="btn btn-solid" id="submitBtn" type="submit">Send details</button>
+            <p class="status" id="status" role="status" aria-live="polite"></p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <span class="disc"><img src="assets/images/logo-mark.webp" alt="" width="52" height="47"></span>
+          <div><b>SHUKART</b><small>Ayurveda</small></div>
+        </div>
+        <p>Root-cause Ayurvedic care by Dr. Shushma Sharma, MD (Kayachikitsa), in Greater Noida and online.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul><li><a href="#initiative">Our initiative</a></li><li><a href="#about">About the clinic</a></li><li><a href="#doctor">About the doctor</a></li><li><a href="#treatments">Treatments</a></li><li><a href="#panchakarma">Panchakarma</a></li></ul>
+      </div>
+      <div>
+        <h4>Patients</h4>
+        <ul><li><a href="#consultation">Consultation</a></li><li><a href="#book">Book a consultation</a></li><li><a href="#faq">FAQ</a></li><li><a href="mailto:Shukart.Ayurveda@gmail.com">Email us</a></li></ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Shukart Ayurveda. All rights reserved.</span>
+      <span>Information on this website does not replace a personal medical consultation.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="float">
+  <a class="wa" id="waBtn" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" hidden><svg><use href="#i-wa"/></svg></a>
+  <button class="top" id="topBtn" aria-label="Back to top"><svg><use href="#i-up"/></svg></button>
+</div>
+
+<script>
+/* ============ CLINIC SETTINGS: edit these ============ */
+const CLINIC = {
+  email: "Shukart.Ayurveda@gmail.com",
+  phone: "+91 98765 43210",       // e.g. "+91 98765 43210" : shows a Phone line in Contact
+  whatsapp: "919876543210",    // e.g. "919876543210" (country code, no + or spaces) : shows the WhatsApp button
+  sheetUrl: "https://script.google.com/macros/s/AKfycbyOZsgBU6w9vgSnfDUhQHUsT-JrrZq0pAJX4nzPVowu3O_B88zkg5pPNTfF749lccQSZw/exec"     
+		   // Paste your Google Apps Script Web App URL here (ends in /exec).
+                   // While empty, the form opens the patient's email app instead.
+};
+/* ===================================================== */
+
+const header=document.getElementById("header"),menuBtn=document.getElementById("menuBtn"),nav=document.getElementById("nav"),topBtn=document.getElementById("topBtn");
+
+function setMenu(open){
+  nav.classList.toggle("open",open);
+  menuBtn.setAttribute("aria-expanded",String(open));
+  menuBtn.setAttribute("aria-label",open?"Close menu":"Open menu");
+  document.body.classList.toggle("menu-open",open);
+}
+menuBtn.addEventListener("click",()=>setMenu(!nav.classList.contains("open")));
+nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>setMenu(false)));
+document.addEventListener("keydown",e=>{if(e.key==="Escape")setMenu(false)});
+
+const onScroll=()=>{header.classList.toggle("scrolled",scrollY>20);topBtn.classList.toggle("show",scrollY>700)};
+addEventListener("scroll",onScroll,{passive:true});onScroll();
+topBtn.addEventListener("click",()=>scrollTo({top:0,behavior:"smooth"}));
+
+const links=[...nav.querySelectorAll('a[href^="#"]:not(.btn)')];
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+e.target.id))}),{rootMargin:"-45% 0px -50% 0px"});
+document.querySelectorAll("main section[id]").forEach(s=>io.observe(s));
+
+/* one FAQ open at a time */
+document.querySelectorAll(".faq details").forEach(d=>d.addEventListener("toggle",()=>{if(d.open)document.querySelectorAll(".faq details").forEach(o=>{if(o!==d)o.open=false})}));
+
+/* contact options from settings */
+if(CLINIC.phone){
+  document.querySelector("[data-phone]").hidden=false;
+  const l=document.querySelector("[data-phone-link]");l.textContent=CLINIC.phone;l.href="tel:"+CLINIC.phone.replace(/[^\d+]/g,"");
+}
+if(CLINIC.whatsapp){
+  const w=document.getElementById("waBtn");w.hidden=false;
+  w.href="https://wa.me/"+CLINIC.whatsapp+"?text="+encodeURIComponent("Hello Shukart Ayurveda, I would like to book a consultation.");
+}
+
+/* banner video: skip on reduced-motion or data-saver, pause when not visible */
+(function(){
+  const v=document.getElementById("bannerVideo"); if(!v) return;
+  const c=navigator.connection||{};
+  const slow=c.saveData||/(^|-)2g$/.test(c.effectiveType||"");
+  if(matchMedia("(prefers-reduced-motion: reduce)").matches||slow) return; // poster image stays
+  const wide=matchMedia("(min-width:768px) and (min-aspect-ratio:1/1)");
+  let current="";
+  const pick=()=>{
+    const k=wide.matches?"desktop":"mobile";
+    if(k===current) return; current=k;
+    v.poster=v.dataset[k+"Poster"]; v.src=v.dataset[k]; v.load(); tryPlay();
+  };
+  const tryPlay=()=>{const p=v.play(); if(p&&p.catch)p.catch(()=>{});};
+  pick();
+  (wide.addEventListener?wide.addEventListener("change",pick):wide.addListener(pick)); // rotating a tablet swaps clips
+  new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting?tryPlay():v.pause()),{threshold:.05}).observe(v);
+  document.addEventListener("visibilitychange",()=>document.hidden?v.pause():tryPlay());
+})();
+
+document.getElementById("year").textContent=new Date().getFullYear();
+document.getElementById("date").min=new Date().toISOString().split("T")[0];
+
+/* form */
+const form=document.getElementById("form"),statusEl=document.getElementById("status"),submitBtn=document.getElementById("submitBtn");
+function say(msg,err){statusEl.textContent=msg;statusEl.classList.toggle("err",!!err)}
+
+form.addEventListener("submit",async e=>{
+  e.preventDefault();
+  const bad=[...form.querySelectorAll("[required]")].find(f=>f.type==="checkbox"?!f.checked:!f.value.trim());
+  if(bad){
+    say(bad.type==="checkbox"?"Tick the consent box to send your details.":"Fill in "+(form.querySelector('label[for="'+bad.id+'"]')?.textContent.replace(" *","").toLowerCase()||"all required fields")+".",true);
+    bad.focus();return;
+  }
+  const data=Object.fromEntries(new FormData(form).entries());
+  if(data.website){form.reset();say("Details sent. The clinic will call you soon.");return;} // bot trap
+  delete data.website;
+  data.consent=data.consent?"Yes":"No";
+
+  if(!CLINIC.sheetUrl){
+    const body=Object.entries({Name:data.name,Age:data.age,Gender:data.gender,Phone:data.phone,City:data.city,"Consultation mode":data.mode,"Needs help with":data.service,"Health concern":data.concern,"Medicines / reports":data.meds,"Best time to call":data.time,"Preferred date":data.date}).map(([k,v])=>k+": "+(v||"-")).join("\n");
+    location.href="mailto:"+CLINIC.email+"?subject="+encodeURIComponent("Consultation request: "+data.name)+"&body="+encodeURIComponent(body);
+    say("Your email app has opened with your details. Press send to finish.");
+    return;
+  }
+
+  submitBtn.disabled=true;submitBtn.textContent="Sending…";say("");
+  try{
+    await fetch(CLINIC.sheetUrl,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify({...data,page:location.href})});
+    say("Thank you, "+data.name.split(" ")[0]+". Your details have reached the clinic and we will call you soon.");form.reset();
+  }catch(err){
+    say("Couldn't send. Check your internet connection, or email "+CLINIC.email+".",true);
+  }finally{
+    submitBtn.disabled=false;submitBtn.textContent="Send details";
+  }
+});
+</script>
+</body>
+</html>
